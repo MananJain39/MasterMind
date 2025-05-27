@@ -102,6 +102,23 @@ def detection(secret_code):
             print(f"Secret code was {secret_code}")
 
 
+def board():
+    # ┌ ┬ ┬ ┐ ─
+    print("┌─────┬───┬───┬───┬───┐")
+
+    # ─ ┤ ├ ┼
+    for x in range(0, 10):
+        print("│     │   │   │   │   │")
+        print("│     │   │   │   │   │")
+
+        print("├─────┼───┼───┼───┼───┤")
+
+    # └ ┴ ┘ ─
+
+    print("│     │   │   │   │   │")
+    print("│     │   │   │   │   │")
+    print("└─────┴───┴───┴───┴───┘")
+
 def menu():
     print("Welcome to MasterMind.")
     print("Choose your difficulty.")
