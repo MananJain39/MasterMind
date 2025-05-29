@@ -92,7 +92,7 @@ def detection(secret_code):
                     g_rem_copy[i] = None
                     secret_code_rem_copy[j] = None
                     break
-
+        board(guess)
         print(f"{red_pegs} R , {white_pegs} W")
 
         if red_pegs == 4:
@@ -102,23 +102,34 @@ def detection(secret_code):
             print(f"Secret code was {secret_code}")
 
 
-def board():
+def board(guess):
     # ┌ ┬ ┬ ┐ ─
-    print("┌─────┬───┬───┬───┬───┐")
-    print("│ CODE│ X │ X │ X │ X │")
+    print("┌─────┬───┬───┬───┬───┬───┬───┐")
+    print("│ CODE│ X │ X │ X │ X │ R │ W │")
 
     # ─ ┤ ├ ┼
-    for x in range(0, 10):
-        if x == 0:
-            print("├─────┼───┼───┼───┼───┤")
-        else:
-            print("│     │   │   │   │   │")
-            print("├─────┼───┼───┼───┼───┤")
+    #     if x == 0:
+    #         print("├─────┼───┼───┼───┼───┤")
+    # else:
+    print("├─────┼───┼───┼───┼───┼───┼───┤")
+
+    print(
+        "│"
+        + "feedback"
+        + "│"
+        + str(guess[0])
+        + "│"
+        + str(guess[1])
+        + "│"
+        + str(guess[2])
+        + "│"
+        + str(guess[3])
+        + "│"
+    )
 
     # └ ┴ ┘ ─
+    print("└─────┴───┴───┴───┴───┴───┴───┘")
 
-    print("│     │   │   │   │   │")
-    print("└─────┴───┴───┴───┴───┘")
 
 def menu():
     print("Welcome to MasterMind.")
