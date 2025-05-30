@@ -92,7 +92,12 @@ def detection(secret_code):
                     g_rem_copy[i] = None
                     secret_code_rem_copy[j] = None
                     break
-        board(guess)
+        # board(guess)
+
+        history = []
+        history.append((guess, red_pegs, white_pegs))
+        board(history)
+
         print(f"{red_pegs} R , {white_pegs} W")
 
         if red_pegs == 4:
@@ -102,7 +107,7 @@ def detection(secret_code):
             print(f"Secret code was {secret_code}")
 
 
-def board(guess):
+def board(history):
     # ┌ ┬ ┬ ┐ ─
     print("┌─────┬───┬───┬───┬───┬───┬───┐")
     print("│ CODE│ X │ X │ X │ X │ R │ W │")
@@ -113,19 +118,24 @@ def board(guess):
     # else:
     print("├─────┼───┼───┼───┼───┼───┼───┤")
 
-    print(
-        "│"
-        + "feedback"
-        + "│"
-        + str(guess[0])
-        + "│"
-        + str(guess[1])
-        + "│"
-        + str(guess[2])
-        + "│"
-        + str(guess[3])
-        + "│"
-    )
+    # # fmt:off
+    # print(
+    #     "│"
+    #     + "CODE"
+    #     + "│"
+    #     + str(guess[0])
+    #     + "│"
+    #     + str(guess[1])
+    #     + "│"
+    #     + str(guess[2])
+    #     + "│"
+    #     + str(guess[3])
+    #     + "│"
+    # )
+    # # fmt:on
+
+    for guess, red, white in history:
+        print(f" {guess[0]} │ {guess[1]} │ {guess[2]} │ {guess[3]} │ {red} │ {white}  ")
 
     # └ ┴ ┘ ─
     print("└─────┴───┴───┴───┴───┴───┴───┘")
