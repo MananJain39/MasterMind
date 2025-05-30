@@ -98,7 +98,7 @@ def detection(secret_code):
         history.append((guess, red_pegs, white_pegs))
         board(history)
 
-        print(f"{red_pegs} R , {white_pegs} W")
+        # print(f"{red_pegs} R , {white_pegs} W")
 
         if red_pegs == 4:
             print("You Guessed the code.")
@@ -135,7 +135,9 @@ def board(history):
     # # fmt:on
 
     for guess, red, white in history:
-        print(f" {guess[0]} │ {guess[1]} │ {guess[2]} │ {guess[3]} │ {red} │ {white}  ")
+        print(
+            f"│     │ {guess[0]} │ {guess[1]} │ {guess[2]} │ {guess[3]} │ {red} │ {white} │ "
+        )
 
     # └ ┴ ┘ ─
     print("└─────┴───┴───┴───┴───┴───┴───┘")
