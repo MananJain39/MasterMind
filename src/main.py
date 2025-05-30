@@ -23,6 +23,7 @@ def generation(diff_range):
 def detection(secret_code):
     print(f"{secret_code}")
     attempts = 10
+    history = []
     for num in range(1, 11):
         # for invalid attempts
         while True:
@@ -94,7 +95,6 @@ def detection(secret_code):
                     break
         # board(guess)
 
-        history = []
         history.append((guess, red_pegs, white_pegs))
         board(history)
 
