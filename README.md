@@ -19,9 +19,9 @@ Use logic and deduction to reveal the hidden code before you run out of tries!
 * Fully playable in the terminal
 * Three difficulty modes:
 
-  * **Easy** – smaller range of digits (e.g., 1–4)
-  * **Medium** – moderate range (e.g., 1–6)
-  * **Hard** – larger range (e.g., 1–8 or more)
+  * **Easy** – smaller range of digits (e.g., 0–5)
+  * **Medium** – moderate range (e.g., 0–7)
+  * **Hard** – larger range (e.g., 0–9)
 * Customizable code length and number of attempts
 * Clean and intuitive terminal interface
 * Lightweight and dependency-free
