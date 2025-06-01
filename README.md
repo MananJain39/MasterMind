@@ -10,7 +10,7 @@ Use logic and deduction to reveal the hidden code before you run out of tries!
 
 ---
 
-** Features**
+**Features**
 
 * Fully playable in the terminal
 * Three difficulty modes:
