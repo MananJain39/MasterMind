@@ -24,6 +24,7 @@ def detection(secret_code):
     print(f"{secret_code}")
     attempts = 10
     history = []
+    if_guessed = False
     for num in range(1, 11):
         # for invalid attempts
         while True:
@@ -95,22 +96,31 @@ def detection(secret_code):
                     break
         # board(guess)
 
+        if red_pegs == 4:
+            if_guessed = True
+
         history.append((guess, red_pegs, white_pegs))
-        board(history)
+        board(history, secret_code, if_guessed)
 
         # print(f"{red_pegs} R , {white_pegs} W")
 
-        if red_pegs == 4:
-            print("You Guessed the code.")
+        if if_guessed:
+            print("Congrats! You have guessed the code.")
+            return
         elif num == attempts:
             print("Attempts over.")
             print(f"Secret code was {secret_code}")
 
 
-def board(history):
+def board(history, secret_code, if_guessed):
     # ┌ ┬ ┬ ┐ ─
     print("┌─────┬───┬───┬───┬───┬───┬───┐")
-    print("│ CODE│ X │ X │ X │ X │ R │ W │")
+    if if_guessed:
+        print(
+            f"│     │ {secret_code[0]} │ {secret_code[1]} │ {secret_code[2]} │ {secret_code[3]} │   │   │ "
+        )
+    else:
+        print("│ CODE│ X │ X │ X │ X │ R │ W │")
 
     # ─ ┤ ├ ┼
     #     if x == 0:
