@@ -1,7 +1,5 @@
-# MasterMind
+# 🎯 Mastermind – Terminal Edition
 ---
-
-**🎯 Mastermind – Terminal Edition**
 
 A terminal-based version of the classic code-breaking game *Mastermind*, built purely in Python. The computer generates a secret code, and you aim to crack it within a limited number of attempts. After each guess, you receive feedback to help guide your next move:
 
