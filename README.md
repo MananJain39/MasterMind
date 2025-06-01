@@ -1,6 +1,4 @@
 # MasterMind
-Great! Here's your finalised GitHub description with that detail included:
-
 ---
 
 **🎯 Mastermind – Terminal Edition**
