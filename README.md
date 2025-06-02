@@ -3,8 +3,8 @@
 
 A terminal-based version of the classic code-breaking game *Mastermind*, built purely in Python. The computer generates a secret code, and you aim to crack it within a limited number of attempts. After each guess, you receive feedback to help guide your next move:
 
-*  Digits that are correct **and** in the correct position
-*  Digits that are correct but in the **wrong** position
+*  Digits that are correct **and** in the correct position - Red Peg
+*  Digits that are correct but in the **wrong** position - White Peg
 
 Use logic and deduction to reveal the hidden code before you run out of tries!
 
