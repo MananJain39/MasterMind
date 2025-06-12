@@ -117,7 +117,7 @@ def board(history, secret_code, if_guessed):
     print("┌─────┬───┬───┬───┬───┬───┬───┐")
     if if_guessed:
         print(
-            f"│     │ {secret_code[0]} │ {secret_code[1]} │ {secret_code[2]} │ {secret_code[3]} │   │   │ "
+            f"│ CODE│ {secret_code[0]} │ {secret_code[1]} │ {secret_code[2]} │ {secret_code[3]} │ R │ W │ "
         )
     else:
         print("│ CODE│ X │ X │ X │ X │ R │ W │")
