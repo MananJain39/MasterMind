@@ -21,7 +21,6 @@ def generation(diff_range):
 
 
 def detection(secret_code):
-    print(f"{secret_code}")
     attempts = 10
     history = []
     if_guessed = False
